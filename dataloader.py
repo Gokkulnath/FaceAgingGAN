@@ -1,4 +1,3 @@
-from  PIL import Image
 import scipy.misc
 import  matplotlib.pyplot as plt
 from glob import glob
