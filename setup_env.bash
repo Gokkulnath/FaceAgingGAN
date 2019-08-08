@@ -20,6 +20,10 @@ pip install -qq git+https://www.github.com/keras-team/keras-contrib.git
 
 echo "Keras Contrib is installed"
 
+echo "Create the Directories for Dataset"
+
+mkdir trainA trainB valA valB testA testB
+
 python prepare_dataset.py
 echo "Dataset folder structure created"
 

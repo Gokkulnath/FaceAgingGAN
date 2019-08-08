@@ -4,13 +4,13 @@ from glob import glob
 import os
 
 import shutil
-os.makedirs('trainA',exist_ok=True) # 18 to 25
-os.makedirs('trainB',exist_ok=True) # 50+
+#os.makedirs('trainA',exist_ok=True) # 18 to 25
+#os.makedirs('trainB',exist_ok=True) # 50+
+#os.makedirs('valA',exist_ok=True) # 18 to 25
+#os.makedirs('valB',exist_ok=True) # 50+
+#os.makedirs('testA',exist_ok=True) # 18 to 25
+#os.makedirs('testB',exist_ok=True) # 50+
 
-os.makedirs('valA',exist_ok=True) # 18 to 25
-os.makedirs('valB',exist_ok=True) # 50+
-os.makedirs('testA',exist_ok=True) # 18 to 25
-os.makedirs('testB',exist_ok=True) # 50+
 
 # print(files[:4])
 count_a=count_b=0
