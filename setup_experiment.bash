@@ -1,3 +1,6 @@
+## Code to Download the UTKFace dataset and organize it into required folder Structure
+## WARN: This script will install modules in requirements.txt in the current python environment
+
 wget https://raw.githubusercontent.com/circulosmeos/gdown.pl/master/gdown.pl
 chmod +x gdown.pl
 wget https://raw.githubusercontent.com/circulosmeos/gdown.pl/master/gdown.pl
@@ -39,3 +42,5 @@ ls ./trainB/ | shuf -n 50 | xargs -i mv ./trainB/{} valB/
 # # Move Sampel Test file
 ls ./trainA/ | shuf -n 50 | xargs -i mv ./trainA/{} testA/
 ls ./trainB/ | shuf -n 50 | xargs -i mv ./trainB/{} testB/
+
+pip install -r requirements.txt
