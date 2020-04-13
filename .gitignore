@@ -1,7 +1,13 @@
+#Dataset Folders
+old
+young
+crop_part1
+crop_part1.tar
 
 
-
+# Python Files Compiled
 *.pyc
 *.pyd
 *.pyo
 
+.ipynb_checkpoints/

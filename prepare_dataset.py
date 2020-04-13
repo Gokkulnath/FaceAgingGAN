@@ -1,28 +1,24 @@
-
-dataset='crop_part1'
-from glob import glob
-import os
-
+import re
 import shutil
-#os.makedirs('trainA',exist_ok=True) # 18 to 25
-#os.makedirs('trainB',exist_ok=True) # 50+
-#os.makedirs('valA',exist_ok=True) # 18 to 25
-#os.makedirs('valB',exist_ok=True) # 50+
-#os.makedirs('testA',exist_ok=True) # 18 to 25
-#os.makedirs('testB',exist_ok=True) # 50+
+import os
+from glob import glob
+
+dataset = "crop_part1"
+
+os.makedirs("young", exist_ok=True)
+os.makedirs("old", exist_ok=True)
 
 
-# print(files[:4])
-count_a=count_b=0
-for fn in glob(dataset+'/*'):
-  age=int(fn.split('/')[-1].split('_')[0])
-  if age>=18 and age <=25:
-    shutil.copy(fn,fn.replace('crop_part1','trainA'))
-    count_a+=1
-  elif age>=50 and age<=60:
-    shutil.copy(fn,fn.replace('crop_part1','trainB'))
-    count_b+=1
-  else:
-    continue
-
-print("No of images in TrainA and TrainB Respectively are {},{}".format(count_a,count_b))
+count_a = count_b = 0
+for fn in glob("crop_part1/*"):
+    age, _ = re.findall(pattern=r"(\d+)_(\d)_", string=fn)[0]
+    age = int(age)
+    if age >= 15 and age <= 30:
+        shutil.copy(fn, fn.replace("crop_part1", "young"))
+        count_a += 1
+    elif age >= 50:
+        shutil.copy(fn, fn.replace("crop_part1", "old"))
+        count_b += 1
+    else:
+        continue
+print("No of images in young is {} and old is {}".format(count_a, count_b))
