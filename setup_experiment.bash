@@ -3,9 +3,8 @@
 
 wget https://raw.githubusercontent.com/circulosmeos/gdown.pl/master/gdown.pl
 chmod +x gdown.pl
-wget https://raw.githubusercontent.com/circulosmeos/gdown.pl/master/gdown.pl
 echo "gdown.pl Dowloading done"
-chmod +x gdown.pl
+# Dataset not required for this Project
 #./gdown.pl https://drive.google.com/open?id=0BxYys69jI14kYVM3aVhKS1VhRUk UTKFace.tar.gz
 #echo "UTKFace.tar.gz Dowloading done"
 #tar -zxf   UTKFace.tar.gz
