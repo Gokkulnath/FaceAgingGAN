@@ -9,23 +9,36 @@ UTKFace dataset is a large-scale face dataset with long age span (range from 0 t
 
 Split the Dataset into 2 Folders :
 
-Age less than 30 Years  and 
-Age greater than 50 Years
-
-
-
+Age greater than  15 and less than 30 Years --> Young
+Age greater than 50 Years --> old
 We use this dataset to train a Cycle GAN
 
-Generate 2 GAN with the objective to generate younger-older equivalents of old-young input images.
-
+We Create 2 GAN with the objective to generate younger-older equivalents of old-young input images.
 
 Cycle GAN Architecture
+![](resources/cyclegan_arch.png)
 
 
-Steps to Run the Experiment Locally:
+## Loss Objectives : 
+
+Adversarial Loss : 
+
+
+Cycle Consistency Loss
+
+
+
+
+
+## Steps to Run the Experiment Locally:
 
 1. Run the **setup_experiment.bash** --> Downloads the dataset and creates the required folder structure
-2. Run python main.py
+2. Run python run.py
 3. Results are stored in images directory
+4. Trained Model weights can be obtained from saved_models directory
+
+
+### Hyperparameters:
+
 
 
