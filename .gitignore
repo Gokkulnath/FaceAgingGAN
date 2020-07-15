@@ -10,4 +10,4 @@ crop_part1.tar
 *.pyd
 *.pyo
 
-.ipynb_checkpoints/
+.ipynb_checkpoints

@@ -19,8 +19,10 @@ echo "crop_part1.tar.gz Extraction done"
 
 echo "Create the Directories for Dataset"
 
-mkdir young old
 
 python prepare_dataset.py
 echo "Dataset folder structure created"
+mkdir old2young
+mv test old2young/
+mv train old2young/
 
